@@ -5,8 +5,7 @@ import { Inter } from "next/font/google";
 
 import { Web3OnboardProvider, init } from "@web3-onboard/react";
 import injectedModule from "@web3-onboard/injected-wallets";
-
-import ConnectWallet from "@/components/ConnectWallet";
+import NavMenu from "@/components/NavBar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -64,7 +63,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Web3OnboardProvider web3Onboard={web3Onboard}>
         <body className={inter.className}>
-          <ConnectWallet />
+          <NavMenu />
           {children}
         </body>
       </Web3OnboardProvider>
