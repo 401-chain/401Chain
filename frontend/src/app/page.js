@@ -12,7 +12,6 @@ export default function Home() {
         </div>
         <div id="mouse-scroll-animation" />
       </div>
-
       <About />
     </main>
   );

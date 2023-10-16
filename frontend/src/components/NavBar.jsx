@@ -1,16 +1,18 @@
 import ConnectWallet from "@/components/ConnectWallet";
 import {
   NavigationMenu,
-  NavigationMenuContent,
-  NavigationMenuIndicator,
   NavigationMenuItem,
-  NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import Link from "next/link";
 
 const NavMenu = () => {
+  const handleAboutClick = () => {
+    document.getElementById("about-container").scrollIntoView({
+      behavior: "smooth",
+    });
+  };
+
   return (
     <NavigationMenu>
       <NavigationMenuList>
@@ -22,7 +24,7 @@ const NavMenu = () => {
 
         <NavigationMenuItem>
           <div className="flex gap-x-6 items-center text-[#2E8B57]">
-            <Link href={"/about"}>About</Link>
+            <button onClick={handleAboutClick}>About</button>
             <ConnectWallet />
           </div>
         </NavigationMenuItem>
