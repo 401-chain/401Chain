@@ -34,17 +34,9 @@ const buttonVariants = cva(
 );
 
 const Button = React.forwardRef(
-  (
-    {
-      className = "bg-[#2E8B57] hover:bg-green-800 text-white",
-      variant,
-      size,
-      asChild = false,
-      ...props
-    },
-    ref
-  ) => {
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
+    className = "bg-[#2E8B57] hover:bg-green-800 text-white " + className;
     return (
       <Comp
         className={cn(buttonVariants({ variant, size, className }))}

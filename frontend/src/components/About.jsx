@@ -6,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import SectionHeading from "./ui/section-heading";
 
 const aboutContent = [
   {
@@ -46,9 +47,7 @@ const About = () => {
       id="about-container"
       className="flex flex-col justify-center items-center"
     >
-      <h2 className="w-fit text-3xl font-bold text-[#2E8B57] mx-6 mt-4 mb-8 pb-2 border-b-[1px] border-[#2E8B57]">
-        About
-      </h2>
+      <SectionHeading text="About" />
       <div className="w-[80%] flex-col space-y-6 mb-16">
         {aboutContent.map(({ title, content }) => (
           <Card className="bg-[#2E8B57] text-white">
