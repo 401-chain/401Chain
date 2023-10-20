@@ -1,0 +1,10 @@
+{
+  "name": "email_circom",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "circom": "^0.5.46",
+    "circomlib": "^2.0.5"
+  }
+}

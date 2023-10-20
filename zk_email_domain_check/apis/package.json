@@ -1,0 +1,23 @@
+{
+  "name": "@zk-email/zk-regex-apis",
+  "version": "1.1.1",
+  "description": "apis compatible with [zk-regex](https://github.com/zkemail/zk-regex/tree/main).",
+  "contributors": [
+    "Javier Su <javier.su.weijie@gmail.com>",
+    "Kata Choi <kata.choi@gmail.com>",
+    "Sora Suegami <suegamisora@gmail.com>",
+    "Yush G <aayushg@mit.edu>"
+  ],
+  "main": "index.node",
+  "scripts": {
+    "build": "cargo-cp-artifact -nc index.node -- cargo build --message-format=json-render-diagnostics",
+    "build-debug": "npm run build --",
+    "build-release": "npm run build -- --release",
+    "install": "npm run build-release",
+    "test": "cargo test"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cargo-cp-artifact": "^0.1"
+  }
+}
